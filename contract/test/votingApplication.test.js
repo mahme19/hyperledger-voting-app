@@ -27,8 +27,8 @@ describe('VotingContract', () => {
         ctx = new Context();
         ctx.setChaincodeStub(stub);
         
-        voter1 = '{"voterId":"TestVoter1, "name": "Test1"}'
-        voter2 = '{"voterId":"TestVoter2, "name": "Test2"}'
+        let voter1 = '{"voterId":"TestVoter1, "name": "Test1"}'
+        let voter2 = '{"voterId":"TestVoter2, "name": "Test2"}'
         ctx.stub.getState.withArgs('TestVoter1').resolves(Buffer.from(voter1));
         ctx.stub.getState.withArgs('TestVoter2').resolves(Buffer.from(voter2));
     });
